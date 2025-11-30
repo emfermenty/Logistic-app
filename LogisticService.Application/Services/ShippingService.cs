@@ -122,7 +122,7 @@ public class ShippingService
     
     private string GetShippingDescription(ShippingType type) => type switch
     {
-        ShippingType.Truck => "Грузовик",
+        ShippingType.Truck => "Грузовиком",
         ShippingType.Sea => "По морю",
         ShippingType.Train => "Поездом",
         ShippingType.Air => "Самолетом",
