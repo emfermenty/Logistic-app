@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FtXQmqhoYTvBxz9dm9jVKkxf8ju7ynHsXbEuF1bUVOI=",
+  "Source": "LogisticService.Optimizer",
+  "BasePath": "_content/LogisticService.Optimizer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,6 @@
+@LogisticService.Optimizer_HostAddress = http://localhost:5240
+
+GET {{LogisticService.Optimizer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
