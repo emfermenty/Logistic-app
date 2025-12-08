@@ -1,0 +1,2 @@
+Protos\Generated\Protos/ShippingOptimizer.cs \
+Protos\Generated\Protos/ShippingOptimizerGrpc.cs: Protos/shipping_optimizer.proto

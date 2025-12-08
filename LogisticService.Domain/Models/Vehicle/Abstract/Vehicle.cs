@@ -30,7 +30,6 @@ public abstract class Vehicle
         double fuelConsumption,
         VehicleType type)
     {
-        // Валидация в конструкторе
         ValidateParameters(model, maxWeight, maxVolume, speed, fuelConsumption);
         
         Id = id;

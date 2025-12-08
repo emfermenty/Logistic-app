@@ -28,8 +28,15 @@ public static class ShippingMapper
         shipping.Duration = entity.Duration;
         shipping.VehicleId = entity.VehicleId;
         shipping.TypeDescription = entity.TypeDescription;
-        shipping.SetStatusAsync(ShippingStatus.Created.ToString()); 
-        
+        if (Enum.TryParse<ShippingStatus>(entity.Status, out var status))
+        {
+            shipping.SetStatusAsync(status.ToString());
+        }
+        else
+        {
+            shipping.SetStatusAsync(ShippingStatus.Created.ToString()); 
+        }
+
         if (entity.Vehicle != null)
         {
             shipping.Vehicle = VehicleMapper.ToDomain(entity.Vehicle);
@@ -42,6 +49,7 @@ public static class ShippingMapper
     {
         return entities.Select(ToDomain).ToList();
     }
+
     public static ShippingEntity ToEntity(Shipping shipping)
     {
         return new ShippingEntity
@@ -55,7 +63,7 @@ public static class ShippingMapper
             Cost = shipping.Cost,
             Duration = shipping.Duration,
             VehicleId = shipping.VehicleId,
-            Status = shipping.Status,
+            Status = shipping.Status.ToString(),
             StartShipping = shipping.StartShipping,
             TypeDescription = shipping.TypeDescription,
             Vehicle = shipping.Vehicle != null ? 
